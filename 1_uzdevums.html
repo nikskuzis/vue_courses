@@ -1,0 +1,38 @@
+<script src= "https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id = "exercise">
+
+    <p> VueJS is pretty cool - {{name}}</p>
+<!--Interpolacija-->
+    <p>{{age * 3}}</p>
+<!--Gadi reiz 3-->
+
+<p>Random number: {{random() }}</p>
+<!--Random float-->
+
+<div>
+    <img v-bind:src="image" style= "width:100px;height: 100px">
+</div>
+    <!--bilde-->
+    <div>
+        <input type= "text" v-bind:value="name" >
+    </div>
+</div>
+<script>
+new Vue({
+    el: '#exercise',
+    data: {
+        name: 'Niks',
+        age: 20,
+        image:'data:image/jpeg;base64,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'
+        
+    },
+    methods: {
+        random: function() {
+            return Math.random() *2;
+        }
+    }
+});
+
+</script>
+</div>
