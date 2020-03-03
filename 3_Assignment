@@ -24,7 +24,7 @@ new Vue({
     },
    computed: {
     result() {
-      return this.value > 37 ? 'Done' : 'not there yet'
+      return this.value > 36 ? 'Done' : 'not there yet'
     }},
       watch: {
     value: function(value) {
